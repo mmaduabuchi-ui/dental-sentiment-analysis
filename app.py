@@ -1,19 +1,26 @@
-import streamlit as st
+import gradio as gr
 import joblib
 
 # Load model and vectorizer
 model = joblib.load("models/logistic_model.pkl")
 vectorizer = joblib.load("models/tfidf_vectorizer.pkl")
 
-st.title("🦷 Dental Clinic Sentiment Analyzer")
-st.write("Enter a dental review to predict whether it's Positive, Negative, or Neutral.")
+# Define prediction function
+def predict_sentiment(text):
+    if not text.strip():
+        return "Please enter a review"
+    vect_text = vectorizer.transform([text])
+    prediction = model.predict(vect_text)[0]
+    return f"Predicted Sentiment: {prediction}"
 
-review = st.text_area("Review Text:")
+# Create Gradio interface
+interface = gr.Interface(
+    fn=predict_sentiment,
+    inputs=gr.Textbox(lines=4, placeholder="Enter dental review..."),
+    outputs="text",
+    title="🦷 Dental Clinic Sentiment Analyzer",
+    description="Paste a review and this AI will tell you if it's Positive, Negative, or Neutral."
+)
 
-if st.button("Analyze Sentiment"):
-    if review.strip():
-        transformed = vectorizer.transform([review])
-        prediction = model.predict(transformed)[0]
-        st.success(f"Predicted Sentiment: **{prediction}**")
-    else:
-        st.warning("Please enter a review.")
+# Launch the app
+interface.launch()
