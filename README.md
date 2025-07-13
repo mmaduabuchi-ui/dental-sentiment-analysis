@@ -1,55 +1,65 @@
-# 🦷 Dental Clinic Sentiment Analysis (NLP Project)
+# 🦷 Dental Clinic Sentiment Analyzer (NLP Project)
 
-This project uses Natural Language Processing (NLP) to analyze and classify real customer reviews of dental clinics into three sentiment categories: Positive, Neutral, and Negative.
+This project uses Natural Language Processing (NLP) to analyze and classify real customer reviews of dental clinics into **Positive**, **Neutral**, or **Negative** sentiments.
 
-## 👨‍🔬 Problem
+## 🎯 Problem
 
-Dental clinics in Nigeria and globally often lack structured feedback systems. Patients’ experiences—both good and bad—are often ignored. This project provides a way to **automatically analyze text feedback** to guide service improvement.
+Most dental clinics in Nigeria don’t gather or analyze structured patient feedback. This means valuable reviews — whether about pain, treatment quality, or satisfaction — go unused. My project offers a data-driven way to extract insights from these reviews using AI.
 
 ## 🧠 Solution
 
 I built a sentiment analysis model using:
-- **TF-IDF Vectorization**
-- **Logistic Regression Classifier**
+- **TF-IDF vectorization**
+- **Logistic Regression**
 
-The model achieved **89% accuracy** on real review data.
+The model was trained on real Yelp dental reviews and achieved **89% accuracy**.
 
 ## 📊 Dataset
 
-- Source: Real Yelp dental reviews
-- Cleaned and preprocessed using Python (NLTK, regex)
+- Source: Real Yelp reviews (scraped and cleaned)
+- Processing: Stopword removal, tokenization, vectorization
 
-## 📦 Libraries Used
+## 🚀 Live Demo
 
-- Pandas
-- Scikit-learn
-- NLTK
-- Matplotlib (for basic visualization)
+Try the app here:  
+👉 https://huggingface.co/spaces/mmadu/dental-sentiment-analyzer
+
+Paste in a dental review to see the AI's sentiment prediction.
 
 ## 📈 Results
 
-The model can classify feedback into:
-- Positive
-- Neutral
-- Negative
+| Sentiment    | Example Review                                 |
+|--------------|------------------------------------------------|
+| Positive     | “The staff was amazing and very friendly.”     |
+| Neutral      | “I visited the clinic last week.”              |
+| Negative     | “The dentist was rude and caused me pain.”     |
 
-## 🎥 Video Demo
+## 💻 Technologies Used
 
-[🔗 Watch 3-minute project video](#) *(Insert Loom or YouTube link here once recorded)*
+- Python
+- Scikit-learn
+- NLTK
+- Streamlit
+- Hugging Face Spaces
 
-## 💡 What I Learned
+## 📽️ 3-Minute Video Demo
 
-- Practical NLP preprocessing
-- Model evaluation and optimization
-- GitHub project documentation
+*(Link your Loom or YouTube video here once uploaded)*
 
-## 🧑🏽‍💻 About Me
+## 📚 What I Learned
+
+- Real-world NLP preprocessing
+- Building & evaluating ML models
+- Hosting models on Hugging Face
+- Communicating AI projects clearly
+
+## 🙋‍♂️ About Me
 
 **Ogu Chinanu Mmaduabuchi**  
-Fellow ID:*FE/23/11723953*  
-3MTT DeepTech NLP Student | 6-Month Track  
-[LinkedIn](https://www.linkedin.com/in/ogu-chinanu-mmaduabuchi-071b79190)
+📚 NLP Track, 3MTT DeepTech Program  
+🔗 LinkedIn: [https://www.linkedin.com/in/ogu-chinanu-mmaduabuchi-071b79190](https://www.linkedin.com/in/ogu-chinanu-mmaduabuchi-071b79190)  
+🆔 Fellow ID: [Insert your Fellow ID]
 
-## 🏷️ Hashtags
+## 🏷 Hashtags
 
 #3MTTLearningCommunity #My3MTT
